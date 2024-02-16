@@ -20,5 +20,10 @@ export default
         id: 3,
         title: "De quem é a famosa frase 'Penso, logo existo'?",
         questions: [{question: "Galileu Galilei", value: false}, {question: "Platão", value: false}, {question: "Descartes", value: true}, {question: "Francis Bacon", value: false}]
+    },
+    {
+        id: 4,
+        title: "Qual é o menor e o país do mundo?",
+        questions: [{question: "São Marino e Índia", value: false}, {question: "Malta e Estados Unidos", value: false}, {question: "Mônaco e Estados Unidos", value: false}, {question: "Vaticano e Rússia", value: true}]
     }
     ]
