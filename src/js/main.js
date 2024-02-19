@@ -1,7 +1,7 @@
-import quizQuestion from "./quizQuestion.js";
-import randomNumber from "./randomNumber.js";
+import showQuestion from "./showQuestion.js";
 
 
-const teste = randomNumber(quizQuestion.length)
-
-console.log(quizQuestion[teste])
+document.querySelector(".startGame").onclick = () => {
+    showQuestion()
+    
+}
