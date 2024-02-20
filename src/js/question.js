@@ -10,20 +10,20 @@ export default function question() {
     
             <div>
                 <div>
-                    <input type="checkbox" name="" id="" value="correct">
-                    <label for="">A</label>
+                    <input type="checkbox" name="firstQuestion" id="firstQuestion" value="correct">
+                    <label for="firstQuestion">A</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="" value="incorrect">
-                    <label for="">B</label>
+                    <input type="checkbox" name="secondQuestion" id="secondQuestion" value="incorrect">
+                    <label for="secondQuestion">B</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="" value="incorrect">
-                    <label for="">C</label>
+                    <input type="checkbox" name="thirdQuestion" id="thirdQuestion" value="incorrect">
+                    <label for="thirdQuestion">C</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="" value="incorrect">
-                    <label for="">D</label>
+                    <input type="checkbox" name="fourQuestion" id="fourQuestion" value="incorrect">
+                    <label for="fourQuestion">D</label>
                 </div>
                 </div>
                     <div>

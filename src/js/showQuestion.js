@@ -6,7 +6,7 @@ import randomNumber from "./randomNumber.js";
 let mapQuizQuestion = quizQuestion.map(entries => entries);
 let quizChoosed;
 
-function chooseQuestion (valor) {
+const chooseQuestion = (valor) => {
     
     quizChoosed = mapQuizQuestion.find(entries => entries.title === mapQuizQuestion[valor].title);
 
@@ -21,10 +21,8 @@ function chooseQuestion (valor) {
 export default function showQuestion() {
 
     const questions = randomNumber(mapQuizQuestion.length);
-
-    console.log(questions)
     
-    let questionChoosed = chooseQuestion(questions)
+    const questionChoosed = chooseQuestion(questions)
 
     messages(questionChoosed)
 
