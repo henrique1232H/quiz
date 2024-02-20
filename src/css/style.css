@@ -74,6 +74,10 @@ body {
     margin-right: 1rem;
 }
 
+label {
+    cursor: pointer;
+}
+
 .hidden {
     display: none;
 }

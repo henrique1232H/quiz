@@ -2,6 +2,9 @@ import question from "./question.js";
 
 let questionsAnswered = [];
 let takeAnswered = []
+let agrupo = []
+let checkedTrue = [];
+let teste = []
 
 export default function messages(questionChoosed) {
     const form = document.querySelector(".quizBox")
@@ -21,29 +24,19 @@ export default function messages(questionChoosed) {
 
     value = 0
 
-    let checkedFalse = []
-
-    div.querySelectorAll("input").forEach(entries => {
-        entries.value = questionChoosed.questions[value].value;
-
-        entries.addEventListener("click", () => {
-            takeAnswered = entries.value;
+    div.querySelectorAll("input").forEach(inputs => {
+        inputs.value = questionChoosed.questions[value].value;
+        
+        inputs.addEventListener("click", () => {
+            takeAnswered = inputs.value;
             
-            
-            console.log(entries, entries.checked)
             const array = Array.from(div.querySelectorAll("input"))
             
-            array.forEach(input => {
-                checkedFalse = array.filter(entries => entries.checked !== input.checked === false);
-
-            })
+            checkedTrue = array.find(entries => entries.checked === inputs.checked === true)
             
 
-            checkedFalse.forEach(entries => {
-                console.log(entries.checked)
-                entries.checked = false
-            })
             
+            agrupo = [checkedTrue, ...agrupo]
         })
         
         
@@ -51,6 +44,8 @@ export default function messages(questionChoosed) {
         value++
     })
 
+
+    
 
 
     div.querySelectorAll("form").forEach(entries => {
@@ -64,7 +59,5 @@ export default function messages(questionChoosed) {
         })
     })
 
-
-    form.append(div)
 
 }

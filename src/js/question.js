@@ -32,6 +32,7 @@ export default function question() {
                 </form>
     `;
 
-
+    const form = document.querySelector(".quizBox");
+    form.append(div)
     return div
 }
