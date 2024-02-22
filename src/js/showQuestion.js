@@ -32,7 +32,7 @@ export default function showQuestion() {
 
         mapQuizQuestion = quizQuestion.map(entries => entries);
 
-        return
+        return true
     }
 
 }

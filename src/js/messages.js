@@ -1,8 +1,10 @@
 import question from "./question.js";
-import logicAboutCheckbox from "./logicAboutCheckbox.js";
+import {logicAboutCheckbox} from "./logicAboutCheckbox.js";
 import showQuestion from "./showQuestion.js";
+import addQuestion from "./addQuestion.js";
 
 let questionsAnswered = [];
+let inputsChoosed
 
 
 export default function messages(questionChoosed) {
@@ -21,25 +23,25 @@ export default function messages(questionChoosed) {
 
     logicAboutCheckbox(div, questionChoosed)
 
-    div.querySelectorAll("form").forEach(entries => {
-        entries.addEventListener("submit", (e) => {
-            e.preventDefault();
+    div.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        inputsChoosed = []
 
-            // questionsAnswered = [takeAnswered ,...questionsAnswered];
+        inputsChoosed = Array.from(div.querySelectorAll("input"));
+        console.log(inputsChoosed)
 
-            const array = Array.from(div.querySelectorAll("input"));
+        const checkedTrue = inputsChoosed.find(entries => entries.checked);
 
-            const checkedTrue = array.find(entries => entries.checked === true);
+        questionsAnswered = [checkedTrue.value, ...questionsAnswered];
 
-            questionsAnswered = [checkedTrue.value, ...questionsAnswered];
+        console.log(questionsAnswered);
+        document.querySelector(".quizBox").innerHTML = "";
 
-            console.log(questionsAnswered)
+        addQuestion()
 
-            showQuestion()
+        const teste = showQuestion();
 
-            
-        })
+        console.log(teste)
     })
-
-
 }
