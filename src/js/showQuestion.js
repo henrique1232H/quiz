@@ -26,7 +26,6 @@ export default function showQuestion() {
 
     messages(questionChoosed)
 
-
     if(mapQuizQuestion.length === 0) {
         alert("Acabou o quiz");
 

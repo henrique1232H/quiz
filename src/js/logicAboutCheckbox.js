@@ -21,8 +21,6 @@ export const logicAboutCheckbox = (div, questionChoosed) => {
                         
             agrup = [checkedTrue, ...agrup];
 
-            console.log(agrup);
-
             if(agrup.length == 2) {
                 deleteChecked(agrup)
             }
@@ -30,7 +28,6 @@ export const logicAboutCheckbox = (div, questionChoosed) => {
         
         value++
     })
-
 
 }
 

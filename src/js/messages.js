@@ -29,11 +29,10 @@ export default function messages(questionChoosed) {
         inputsChoosed = []
 
         inputsChoosed = Array.from(div.querySelectorAll("input"));
-        console.log(inputsChoosed)
 
         const checkedTrue = inputsChoosed.find(entries => entries.checked);
 
-        questionsAnswered = [checkedTrue.value, ...questionsAnswered];
+        questionsAnswered = [{title: questionChoosed.title, correct: checkedTrue.value }, ...questionsAnswered];
 
         console.log(questionsAnswered);
         document.querySelector(".quizBox").innerHTML = "";
