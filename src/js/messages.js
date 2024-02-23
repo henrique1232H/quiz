@@ -5,7 +5,7 @@ import addQuestion from "./addQuestion.js";
 
 let questionsAnswered = [];
 let inputsChoosed
-
+let testeAlo = [];
 
 export default function messages(questionChoosed) {
 
@@ -39,8 +39,14 @@ export default function messages(questionChoosed) {
 
         addQuestion()
 
-        const teste = showQuestion();
+        const checkIfQuizIsComplete = showQuestion();
 
-        console.log(teste)
+        if(questionsAnswered.length === checkIfQuizIsComplete.length) {
+            document.querySelector(".quizBox").innerHTML = "";
+
+            return;
+        } 
+
+
     })
 }
