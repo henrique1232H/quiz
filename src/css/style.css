@@ -83,6 +83,13 @@ label {
 }
 
 
+.hiddenAndOpacity {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+
+}
+
 .result {
     position: absolute;
     background: rgba(0,0,0,0.5);
@@ -123,4 +130,8 @@ label {
     display: flex;
     justify-content: end;
     align-items: end;
+}
+
+li {
+    list-style: none;
 }

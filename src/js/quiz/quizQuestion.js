@@ -15,7 +15,7 @@ export default
         questions: [{question: "Tem entre 4 a 6 litros. São retirados 450 militros", value: true}, {question: "Tem 10 litros. São retirados 2 litros.", value: false}, {question: "Tem 7 litros. São retirados 1,5 litros", value: false}, {question: "Tem 0,5 litros. São retirados 0,5 litros", value: false}]
     },
     {
-        title: "De quem é a famosa frase 'Penso, logo existo'?",
+        title: "De quem é a famosa frase: 'Penso, logo existo'?",
         questions: [{question: "Galileu Galilei", value: false}, {question: "Platão", value: false}, {question: "Descartes", value: true}, {question: "Francis Bacon", value: false}]
     },
     {
