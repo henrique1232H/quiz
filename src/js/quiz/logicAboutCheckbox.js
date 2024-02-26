@@ -3,13 +3,13 @@
 let checkedTrue = [];
 let agrup = [];
 
-export const logicAboutCheckbox = (div, questionChoosed) => {
+export const logicAboutCheckbox = (div, questionChoose) => {
     let value = 0;
 
     div.querySelectorAll("input").forEach(inputs => {
         inputs.checked = false  
 
-        inputs.value = questionChoosed.questions[value].value;
+        inputs.value = questionChoose.questions[value].value;
         
         inputs.addEventListener("click", (e) => {
 

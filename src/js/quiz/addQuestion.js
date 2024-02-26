@@ -40,4 +40,6 @@ export default function addQuestion() {
 
     quizBox.querySelector("div").classList.remove("hidden")
 
+    return quizBox
+
 }
