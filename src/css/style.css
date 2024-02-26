@@ -81,3 +81,46 @@ label {
 .hidden {
     display: none;
 }
+
+
+.result {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result > div {
+    background: #fff;
+    color: #000;
+    width: min(50rem, 90%);
+    padding: 2rem;
+    border-radius: 1rem;
+    height: auto;
+    box-shadow: 0 0 2rem 1rem #000;
+}
+
+.result .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.result button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.result button i {
+    font-size: 2rem;
+}
+
+.result .exit {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
