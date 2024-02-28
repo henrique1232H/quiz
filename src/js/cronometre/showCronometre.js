@@ -4,6 +4,10 @@ let count
 export default function showCronometre(difficulty) {
     console.log(difficulty)
 
+    if(difficulty === "easy" || difficulty === "") {
+        return
+    }
+
     if(difficulty === "average") {
         count = 5
     }

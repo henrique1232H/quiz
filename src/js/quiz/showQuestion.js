@@ -18,7 +18,7 @@ const chooseQuestion = (question) => {
 
 export function showQuestion() {
 
-    const questions = randomNumber(mapQuizQuestion.length);
+    const questions = randomNumber(mapQuizQuestion.length - 1);
 
     const questionChoose = chooseQuestion(questions);
     
