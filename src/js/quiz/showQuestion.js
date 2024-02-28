@@ -22,7 +22,6 @@ export function showQuestion() {
 
     const questionChoose = chooseQuestion(questions);
     
-
     messages(questionChoose);
 
 

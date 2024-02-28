@@ -2,7 +2,6 @@ import { reset } from "../quiz/showQuestion.js";
 import createLiFromResult from "./createLiFromResult.js";
 
 export default function ifQuizComplete(quiz, answers) {
-  if (quiz.length === answers.length) {
     reset();
 
     let value = 0;
@@ -24,6 +23,5 @@ export default function ifQuizComplete(quiz, answers) {
       document.querySelector(".result").classList.add("hiddenAndOpacity");
       document.querySelector(".result ul").innerHTML = "";
     };
-    return;
-  }
+
 }

@@ -1,6 +1,6 @@
 import question from "./question.js";
 import {logicAboutCheckbox} from "./logicAboutCheckbox.js";
-import {showQuestion, reset} from "./showQuestion.js";
+import {showQuestion} from "./showQuestion.js";
 import addQuestion from "./addQuestion.js";
 import ifQuizComplete from "../result/check.js";
 import quizQuestion from "./quizQuestion.js";
@@ -49,8 +49,10 @@ export default function messages(questionChoose) {
         addQuestion()
         showQuestion();
     
-        ifQuizComplete(quizQuestion, questionsAnswered)
-        
+        if(quizQuestion.length === questionsAnswered.length) {
+            ifQuizComplete(quizQuestion, questionsAnswered)
+        }
+
 
         if(questionsAnswered.length === 5) {
             questionsAnswered = [];
