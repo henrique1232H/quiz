@@ -1,13 +1,13 @@
 {
   "name": "quiz",
   "version": "1.0.0",
-  "description": "",
+  "description": "Quiz",
   "main": "index.js",
   "scripts": {
     "start": "lite-server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Henrique Cardoso de Oliveira",
   "license": "ISC",
   "dependencies": {
     "lite-server": "^2.6.1"
