@@ -15,7 +15,7 @@ export default function messages(questionChoose) {
     const div = question();
 
     try {
-        document.querySelector(".quizBox h1").textContent = questionChoose.title;
+        document.querySelector(".quizBox h2").textContent = questionChoose.title;
         
     } catch (error) {
         document.querySelector(".quizBox div").classList.add("hidden")

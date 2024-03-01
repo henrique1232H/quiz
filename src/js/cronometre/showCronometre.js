@@ -1,23 +1,30 @@
-let interval
-let seconds = 60
+import state from "./state.js"
 
-export default function showCronometre(minutes) {
+
+let interval
+
+export default function showCronometre() {
     clearTimeout(interval)
 
-    seconds--
 
+    state.seconds--
+    document.querySelector(".seconds").textContent = String(state.seconds).padEnd(2, '0');
 
-    if(seconds < 1) {
-        seconds = 60;
-        minutes--
+    document.querySelector(".minutes").textContent = String(state.minutes).padStart(2, '0');
+
+    
+    
+    if(state.seconds < 1) {
+        state.seconds = 60;
+        state.minutes--
     }
-
-
+    
+    
     interval = setTimeout(() => {
         showCronometre()
     }, 1000)
-
-
-    console.log(seconds)
+    
 
 }
+
+

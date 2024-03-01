@@ -8,7 +8,7 @@ export default function addQuestion() {
         <div class="hidden">
         <form action="" class="quiz">
 
-        <h1>Quem foi Pedro Alvares Cabral?</h1>
+        <h2>Quem foi Pedro Alvares Cabral?</h2>
 
 
         <div class="inputChart">

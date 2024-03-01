@@ -26,8 +26,14 @@ body {
 }
 
 
-#app > h1 {
+#app h1, .title span {
     font-size: 4rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .addQuestions {

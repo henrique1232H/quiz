@@ -7,7 +7,9 @@ document.querySelector(".startGame").onclick = () => {
     document.querySelector(".quizBox div").classList.remove("hidden");
 
     document.querySelector(".startGame").classList.add("hidden");
-    document.querySelector("select").classList.add("hidden")
+    document.querySelector("select").classList.add("hidden");
+    document.querySelector(".cronometer").classList.remove("hidden")
+
 
     showQuestion()
     checkDifficulty()

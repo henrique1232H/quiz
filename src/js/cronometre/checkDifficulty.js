@@ -1,25 +1,26 @@
 import showCronometre from "./showCronometre.js";
-
+import state from "./state.js"
 
 
 export default function checkDifficulty() {
     const difficulty = document.querySelector("select").value;
-    let minutes
-    
 
     if(difficulty === "easy" || difficulty === "") {
+        document.querySelector(".cronometer").classList.add("hidden")
+
         return
     }
 
     if(difficulty === "average") {
-        minutes = 5
+        state.minutes = 5
+
     }
 
     if(difficulty === "hard") {
-        minutes = 0
+        state.minutes = 0
     }
 
 
-    showCronometre(minutes)
+    showCronometre()
 
 }
