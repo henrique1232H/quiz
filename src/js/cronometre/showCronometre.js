@@ -1,26 +1,23 @@
+let interval
+let seconds = 60
 
-let count
+export default function showCronometre(minutes) {
+    clearTimeout(interval)
 
-export default function showCronometre(difficulty) {
-    console.log(difficulty)
+    seconds--
 
-    if(difficulty === "easy" || difficulty === "") {
-        return
+
+    if(seconds < 1) {
+        seconds = 60;
+        minutes--
     }
 
-    if(difficulty === "average") {
-        count = 5
-    }
 
-
-    setInterval(() => {
-        count--
-        console.log(count)
-
-        if(count == 0) {
-            return
-        }
+    interval = setTimeout(() => {
+        showCronometre()
     }, 1000)
-    
+
+
+    console.log(seconds)
 
 }
