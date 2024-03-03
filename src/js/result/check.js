@@ -1,8 +1,13 @@
+import state from "../cronometre/state.js";
 import { reset } from "../quiz/showQuestion.js";
 import createLiFromResult from "./createLiFromResult.js";
 
 export default function ifQuizComplete(quiz, answers) {
     reset();
+
+    clearTimeout(state.interval)
+    document.querySelector(".cronometer").classList.add("hidden")
+    
 
     let value = 0;
     answers.forEach((entries) => {
