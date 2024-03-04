@@ -11,7 +11,10 @@ export default function ifQuizComplete(quiz, answers) {
 
     let value = 0;
     answers.forEach((entries) => {
-      createLiFromResult(entries.title, entries.correct);
+
+      console.log(entries.rightQuestion)
+
+      createLiFromResult(entries.title, entries.rightQuestion.question);
 
       if (entries.correct === "true") {
         value++;

@@ -33,16 +33,21 @@ export default function messages(questionChoose) {
     
     logicAboutCheckbox(div, questionChoose)
     
+    
     div.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault();
         
         inputsChoose = []
-    
+        
         inputsChoose = Array.from(div.querySelectorAll("input"));
-    
+        
         const checkedTrue = inputsChoose.find(entries => entries.checked);
-    
-        questionsAnswered = [{title: questionChoose.title, correct: checkedTrue.value }, ...questionsAnswered];
+        
+
+        const searchRightQuestion = questionChoose.questions.find(entries => entries.value === true);
+            
+
+        questionsAnswered = [{title: questionChoose.title, correct: checkedTrue.value, rightQuestion: searchRightQuestion }, ...questionsAnswered];
     
         document.querySelector(".quizBox").innerHTML = "";
     
