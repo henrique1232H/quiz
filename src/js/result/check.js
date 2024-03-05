@@ -32,7 +32,8 @@ export default function ifQuizComplete(quiz, answers) {
       document.querySelector(".result ul").innerHTML = "";
 
       document.querySelector(".startGame").classList.remove("hidden");
-      document.querySelector("select").classList.remove("hidden")
+      document.querySelector("select").classList.remove("hidden");
+      document.querySelector("select").value = ""
     };
 
 }

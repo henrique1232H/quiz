@@ -13,6 +13,7 @@ export default function checkDifficulty() {
 
     if(difficulty === "average") {
         state.minutes = 5
+        state.seconds = 1
 
     }
 
