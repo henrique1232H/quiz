@@ -1,7 +1,7 @@
 
 
 let checkedTrue = [];
-let agrup = [];
+let agrupe = [];
 
 export const logicAboutCheckbox = (div, questionChoose) => {
     let value = 0;
@@ -11,19 +11,22 @@ export const logicAboutCheckbox = (div, questionChoose) => {
 
         inputs.value = questionChoose.questions[value].value;
         
+
         inputs.addEventListener("click", (e) => {
 
-            agrup = []
 
             const array = Array.from(div.querySelectorAll("input"))
             
             checkedTrue = array.find(entries => entries === e.target)
-                        
-            agrup = [checkedTrue, ...agrup];
+            
 
-            if(agrup.length == 2) {
-                deleteChecked(agrup)
+            agrupe = [checkedTrue, ...agrupe];
+
+
+            if(agrupe.length == 2) {
+                deleteChecked(agrupe)
             }
+
         })
         
         value++
@@ -33,8 +36,8 @@ export const logicAboutCheckbox = (div, questionChoose) => {
 
 
 export const deleteChecked = () => {
-    agrup.forEach(entries => {
+    agrupe.forEach(entries => {
         entries.checked = false
     })
-    agrup = []
+    agrupe = []
 }

@@ -1,5 +1,5 @@
 import question from "./question.js";
-import {logicAboutCheckbox} from "./logicAboutCheckbox.js";
+import {deleteChecked, logicAboutCheckbox} from "./logicAboutCheckbox.js";
 import {showQuestion} from "./showQuestion.js";
 import addQuestion from "./addQuestion.js";
 import ifQuizComplete from "../result/check.js";
@@ -62,5 +62,7 @@ export default function messages(questionChoose) {
         if(questionsAnswered.length === 5) {
             questionsAnswered = [];
         }
+
+        deleteChecked()
     })
 }
