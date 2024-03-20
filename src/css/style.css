@@ -26,11 +26,11 @@ body {
 }
 
 
-#app h1, .titleCronometer span {
+#app h1, .titleCronometre span {
     font-size: 4rem;
 }
 
-.titleCronometer {
+.titleCronometre {
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -6,7 +6,7 @@ export default function checkDifficulty() {
     const difficulty = document.querySelector("select").value;
 
     if(difficulty === "easy" || difficulty === "") {
-        document.querySelector(".cronometer").classList.add("hidden")
+        document.querySelector(".cronometre").classList.add("hidden")
 
         return
     }

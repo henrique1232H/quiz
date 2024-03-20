@@ -15,7 +15,7 @@ export default function showCronometre() {
         document.querySelector(".startGame").classList.remove("hidden");
         document.querySelector("select").classList.remove("hidden");
         document.querySelector(".quizBox div").classList.add("hidden");
-        document.querySelector(".cronometer").classList.add("hidden")
+        document.querySelector(".cronometre").classList.add("hidden")
 
         return
     }
